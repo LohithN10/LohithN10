@@ -1,0 +1,74 @@
+---Creating tables as per ER Diagram-------------
+
+create table customers(
+customer_id varchar(15) not null ,
+customer_email varchar(25) not null,
+customer_name varchar(30) not null,
+segment varchar(25) not null,
+country varchar(25) not null,
+city varchar(25) not null,
+state varchar(25) not null,
+postal_code int not null,
+region varchar(25) not null,
+PRIMARY KEY(customer_id)
+)
+
+create table vendors(
+vendor_id varchar(25) not null ,
+vendor_name varchar(50) not null,
+PRIMARY KEY(vendor_id)
+)
+
+create table orders(
+order_id varchar(20) not null ,
+customer_id varchar(15) not null ,
+vendor_id  varchar(25) not null ,
+ship_mode varchar(15) not null,
+order_status varchar(25),
+order_purchase_date 			 timestamptz not null,
+order_approved_at                timestamptz ,
+order_delivered_carrier_date     timestamptz ,
+order_delivered_customer_date    timestamptz,
+order_estimated_delivery_date    timestamptz not null,
+PRIMARY KEY(order_id),
+FOREIGN KEY(customer_id) REFERENCES customers(customer_id),
+FOREIGN KEY(vendor_id) REFERENCES vendors(vendor_id)
+)
+
+create table returns(
+order_id         varchar(20),
+return_reason    varchar(20),
+FOREIGN KEY(order_id) REFERENCES orders(order_id)
+  )
+  
+create table transactions(
+transaction_id 			SERIAL not null,
+order_id                 varchar(20) not null,
+product_id               varchar(25) not null,
+sales                  float,
+quantity                 int,
+discount                float,
+profit                  float,
+payment_type             varchar(20),
+payment_installments      int,
+primary key(transaction_id),
+FOREIGN KEY(order_id) REFERENCES orders(order_id)
+)
+
+----Checking the movement of data---------
+
+--Checking the movement of data 
+select count(*) from customers
+select * from customers
+
+select count(*) from orders 
+select * from orders
+
+select count(*) from vendors
+select * from vendors
+
+select count(*) from returns
+select * from returns
+
+select count(*) from transactions
+select * from transactions
