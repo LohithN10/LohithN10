@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article title</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button>Click here for the prompt</button>
+
+    <div id="one">
+        <a href="https://www.google.com/">Google link</a>
+        <h1>My Blog</h1>
+        <h6>The is my blog web page, here you can find data engineering related blogs</h6>
+        <h2>My first Article</h2>
+        <p id="date">27/09/2023</p>
+        <img src="C:\Users\lohith.n\OneDrive - Fractal Analytics Pvt. Ltd\Pictures\a49ccf0c1df44d85879d5e208d2ebd26.png">
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </div>
+
+    <div id="two">
+        <h1>Article 2</h1>
+        <h6>Ad hoc requests are requests for you to undertake a project or a piece of work that come unexpectedly, at short notice or without planning. They may emerge as a consequence of a problem arising, unforeseen circumstances or to respond to requests from a client.</h6>
+        <h2>My second Article</h2>
+        
+        <p id="date">27/09/2023</p>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing<a href="https://en.wikipedia.org/wiki/Llama">I know llma</a> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </div>
+
+    <script>
+        var imges = document.querySelector('#one img');
+        // alert('The Image will change now')
+        imges.setAttribute('src','https://th.bing.com/th/id/R.c969f1d0a12e2ac2d5c44cde7bd9fd36?rik=JL%2bxtDA09B6hWA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Me3-M0U9XIU%2fTn3Wr7YJDsI%2fAAAAAAAAAO0%2fEcrlIFlGEwM%2fs1600%2ffamily%2bdogs-473268.jpeg&ehk=IaPlXbN%2fYSBJIAZ1LB74T%2brf6KU4xmZDnQXS%2bMOwAD0%3d&risl=&pid=ImgRaw&r=0');
+        
+        var pc =document.querySelectorAll('#two p');
+
+        for(var i of pc){
+            i.className='blue';
+        }
+
+        // For this challenge, get all the links, then check 
+        // to see if one of them is set to go to the 
+        // wikipedia page on llamas, if it is, set the text 
+        // of that link to "Llamas are cool!"
+
+        var anchortags = document.getElementsByTagName('a');
+
+        for( var i=0;i<anchortags.length;i++){
+            var link = anchortags[i].getAttribute('href');
+
+            if (link==='https://en.wikipedia.org/wiki/Llama'){
+                anchortags[i].innerHTML = 'Llamas are so cool!';
+            }
+        }
+
+        var btn = document.querySelector('button');
+
+        // function ouch(){
+        //     alert('Have a great day!!');
+        // }
+        // btn.onclick = ouch;
+
+        btn.addEventListener('click',function (event){
+            event.target.style.backgroundColor = 'red';
+            alert('Have a great day!!');
+        });
+
+        var link = document.querySelector('a');
+
+        link.addEventListener('click',function(event){
+            event.preventDefault();
+            alert("Don't go to Google" )
+        })
+
+    </script>
+</body>
+</html>

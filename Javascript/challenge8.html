@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 8</title>
+</head>
+<body>
+    <h1>Javascript Basic Chanllenges</h1>
+    <h2>Challenge 8</h2>
+
+    <script>
+
+        // var firstname = 'Lohith';
+        // var secondname = 'N';
+        // var adjective = 'focused and attentive'
+        /* console.log(firstname);
+        console.log(secondname); */
+        function promtcheck(number){
+        if (number < 10){   
+            console.log("You entered a number smaller than 10")
+            
+            for ( var i=0 ; i<10 ; i++)
+                {   if(number==i){
+                    console.log(`Here is a ${i}  <--- this is the number you entered`)
+                }
+                    else{
+                        console.log(`Here is ${i}`)
+                    }
+            }
+        }
+        else if (number > 9)
+        {console.log("You entered a big number")}
+        else {
+            console.log('There was an error')
+        }}
+
+        var number = prompt('Enter a whole number','')
+
+        promtcheck(number);
+        // console.log(firstname + " " + secondname)
+        // console.log(name,'\n',name)
+
+        // console.log(`Hello ${name}, and Welcome!`)
+
+    </script>
+</body>
+</html>

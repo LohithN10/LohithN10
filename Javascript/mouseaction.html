@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse actions and scroll</title>
+    <style>
+        div{
+            height: 5000px;
+            width: 50px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Roll the mouse all over the box - scrolling included</h1>
+
+
+    <div></div>
+
+    <script>
+
+
+    var box = document.querySelector('div');
+    var heading = document.querySelector('h1');
+
+    box.addEventListener('mouseover',function(){
+        heading.innerHTML = 'The mouse is inside the box';
+    })
+
+    box.addEventListener('mouseout',function(){
+        heading.innerHTML='The mouse moved out of the box';
+    })
+
+    heading.addEventListener('mouseover',function(){
+        heading.innerHTML = 'Roll the mouse all over the box'
+    })
+
+    </script>
+
+    <script>
+
+        var pagetop;
+
+        window.addEventListener('scroll',function(){
+
+            pagetop = window.pageYOffset;
+            console.log(pagetop);
+        })
+    </script>
+    
+</body>
+</html>

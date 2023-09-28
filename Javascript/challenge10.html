@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 10</title>
+</head>
+<body>
+    <h1 id ='on'>Challenge 10</h1>
+
+    <script id="er">
+
+        var foods = ['apple','grapes','orange','mosambi'];
+
+        document.getElementById('on').style.color ='red';
+        document.getElementById('er').style.color = 'blue'
+        function hello(name){
+            var greetings;
+            if(name && name != 'null'){
+            greetings = (`Hello ${name}, welcome!`);
+            }else{
+            greetings = ('You did not give a name')
+            }
+
+            return greetings;
+        }
+        
+
+        function randomInt(min,max){
+            return Math.floor((max-min+1)*Math.random()+min)
+        }
+
+
+        function hospitality(name,gifts){
+           
+            console.log(hello(name));
+
+            console.log(`Hi ${name}, would you like some ${gifts[randomInt(0,gifts.length-1)]}?`)
+
+        }
+
+
+        var name = prompt('Please enter your name','');
+        
+        hospitality(name, foods);
+        
+    </script>
+</body>
+</html>

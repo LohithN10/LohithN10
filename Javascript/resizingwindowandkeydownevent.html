@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resizing window and key down event </title>
+</head>
+<body>
+    <h1>Resizing the window and wacth the console</h1>
+    <h1>And key down event</h1>
+    <p>Press a key on you keyboard</p>
+
+    <script>
+
+        window.addEventListener('resize',function(){
+            console.log(`the window width is ${window.innerWidth}`);
+            console.log(`the window height is ${window.innerHeight}`);
+        })
+
+        document.addEventListener('keydown', function(event){
+            alert(`A ${event.key} was pressed`)
+        })
+
+    </script>
+</body>
+</html>

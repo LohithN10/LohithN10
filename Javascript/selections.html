@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Selections</title>
+</head>
+<body>
+
+    <h1>Testing selection</h1>
+
+    <script>
+
+        var good = true
+        var bad = false
+        var green = 'st'; //[0,Nan, null, undefined, false --> false:], string, true and all other numbers are true
+        var num = 5;
+        var othernum = 5;
+        var notnum = '5';
+
+        if ( num == notnum ){
+            console.log('This statement is true')  //JavaScript is loosely typed and it allows for something called type coercion when == is used, but not when === is used.
+        }
+        else{
+            console.log('This statement is false')
+        }
+
+        /* 
+        if , else if statements,  switch statements,  case "red": console.log('this is red'); break; 
+        default: console.log('There was an error');
+        && --> and operator
+        || --> or operator
+        if (var1 && var2){
+            console.log('They both are true')
+        }else {
+            console.log('Both or either of the variables is/are false')
+        }
+        */
+    </script>
+    
+</body>
+</html>

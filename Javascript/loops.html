@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in Javascript</title>
+</head>
+<body>
+    
+    <h1>Loops in JavaScript</h1>
+
+    <script>
+
+        var colors = ['red','green','blue','purple','magenta','yellow']
+
+        /* for(var i=0; i<colors.length;i++){
+            console.log(colors[i])
+        } */
+
+      /*   for (var x of colors){
+            console.log(x)
+        }
+
+        var statement = 'switch statements,  case "red": console.log(this is red); break'
+
+        for (var eachitem of statement){
+            console.log(eachitem,'\n')
+        }
+        for(var i=0; i<10;i++){
+            console.log('This is numner', i ,'\n')
+        } */
+
+        var inc = 0;
+        var text = "";
+
+        while(inc<10){
+            text+="The incrementor has gone upto " + inc + "\n";
+            inc++;
+        }
+        
+        console.log(text)
+        
+        /* Using tick marks and template literals makes long strings that include variables
+        much easier to read, and you will make fewer syntax errors. */
+        
+        while(inc<20){
+            text+=`The incrementor has gone upto ${inc} and squared is ${inc*inc}\n`
+            inc++;
+        }
+
+        console.log(text)
+    </script>
+
+</body>
+</html>
