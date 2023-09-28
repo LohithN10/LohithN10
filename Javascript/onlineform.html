@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online form</title>
+</head>
+<body>
+    <h1>Online Form</h1>
+
+    <form method="get">
+        <label> Your name:<input type="text" name="name"></label>
+        <input type="submit" value="send">
+    </form>
+    
+    <script>
+
+        var myform = document.querySelector('form')
+
+        myform.addEventListener('submit',function(e){
+            
+            e.preventDefault();
+
+            var formdata = document.querySelector('input').value;
+            alert(`You cannot submit the form ${formdata}`)
+        })
+    </script>
+</body>
+</html>
