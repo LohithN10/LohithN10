@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic distance converter</title>
+    <style href='styleBasicConv.css'></style>
+    <script src='scriptBasicConv.js' defer></script>
+</head>
+<body>
+<h1> Miles to kilomters converter</h1>
+
+<div class="container top">
+    <p>Type in the number of miles and click the button to convert the distance to kilometers</p>
+
+    <form method="POST" action="somephpfile.php" id="convert">
+        <input type="text" name="distance" id="distance" placeholder="distance">
+        <input type="submit" name="convertdist" value="Convert Distance">
+    </form>
+</div>
+
+<div class="container bottom" id='answer'>
+    <h2 class="invisible">Answer goes here</h2>
+</div>
+
+<div id="direction">
+    <h3>Press the "M" key to switch to kilometers to miles convertion</h3>
+</div>
+</body>
+</html>

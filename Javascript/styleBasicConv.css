@@ -1,0 +1,42 @@
+h1, h2, p{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    text-align: center;
+    width: 500px;
+    height: 400px;
+    color: #333;
+    font-family: 'PT Sans', sans-serif;
+    padding: 50px 0;
+}
+
+.container top{
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.top{
+    background: #ebf6be;
+}
+
+.invisible{
+    color: #AABCCC;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Oswald', sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: lem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 130%;
+}
