@@ -2,12 +2,12 @@
 
     "use strict";
 
-    var form = document.getElementById('convert')
-    var convertType = 'kilometers';
-    var heading = document.querySelector('h1');
-    var intro = document.querySelector('p');
-    var answerDiv = document.querySelector('#answer');
-    var direction = document.getElementById('direction');
+    const form = document.getElementById('convert')
+    let convertType = 'kilometers';
+    const heading = document.querySelector('h1');
+    const intro = document.querySelector('p');
+    const answerDiv = document.querySelector('#answer');
+    const direction = document.getElementById('direction');
 
 
     document.addEventListener('keydown',function(event){
