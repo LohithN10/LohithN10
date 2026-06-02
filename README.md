@@ -1,3 +1,3 @@
-Hi, I’m Lohith N
-I’m interested in Data Engineering, Architecture and solving problems.
-Always available at https://www.linkedin.com/in/lohith-n2000/ on LinkedIn
+- Hi, I’m Lohith N
+- I’m interested in Data Engineering, Architecture and solving problems.
+- Always available at https://www.linkedin.com/in/lohith-n2000/ on LinkedIn
